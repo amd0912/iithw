@@ -1,7 +1,8 @@
 #!/bin/bash
 function f{
-
-cd "$1"
+if [ -n "$1" ]
+      then cd "$1"
+fi
 
 ls -R | egrep ":$|*.jpg$|*.jpeg$"
 
