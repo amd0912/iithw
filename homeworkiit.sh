@@ -1,8 +1,8 @@
 #!/bin/bash
 function f{
-if [ -n "$1"]
-        then cd "$1"
-fi
+
+cd "$1"
+
 ls -R | egrep ":$|*.jpg$|*.jpeg$"
 
 if [ 'ls -F -1 | grep "/" | wc -l' = 0 ]
@@ -12,6 +12,6 @@ ls -R -l | egrep '*.jpg$|*.jpeg$' | awk '{ x+= $5 } END { print "total size " x}
 exit
 }
 if [ -z "$1" ]
-    then f
+    then f pwd
     else f $1
 fi
