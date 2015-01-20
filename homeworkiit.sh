@@ -1,5 +1,5 @@
 #!/bin/bash
-function f{
+function f {
 if [ -n "$1" ]
       then cd "$1"
 fi
